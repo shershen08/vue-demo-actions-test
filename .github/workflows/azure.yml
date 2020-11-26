@@ -26,9 +26,9 @@ on:
       - master
 
 env:
-  AZURE_WEBAPP_NAME: vue-demo-actions    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
-  NODE_VERSION: '10.x'                # set this to the node version to use
+  AZURE_WEBAPP_NAME: vue-test-samples
+  AZURE_WEBAPP_PACKAGE_PATH: 'dist/' 
+  NODE_VERSION: '12.x'                # set this to the node version to use
   WEBSITE_WEBDEPLOY_USE_SCM: true 
 
 jobs:
