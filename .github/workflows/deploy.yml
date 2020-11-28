@@ -22,7 +22,7 @@ jobs:
     - name: Publish to Github Packages Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: shershen08/react-demo-deploy-app/my-app
+        name: shershen08/vue-demo-actions-test/vue-app
         registry: docker.pkg.github.com
         username: ${{ secrets.USERNAME_FULL }}
         password: ${{ secrets.GITHUB_TOKEN }}
@@ -42,5 +42,5 @@ jobs:
         script: |
           docker stop $(docker ps -a -q)
           docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
-          docker pull docker.pkg.github.com/shershen08/react-demo-deploy-app/my-app:latest
-          docker run -dit -p 80:80 docker.pkg.github.com/shershen08/react-demo-deploy-app/my-app:latest
+          docker pull docker.pkg.github.com/shershen08/vue-demo-actions-test/vue-app:latest
+          docker run -dit -p 80:80 docker.pkg.github.com/shershen08/vue-demo-actions-test/vue-app:latest
